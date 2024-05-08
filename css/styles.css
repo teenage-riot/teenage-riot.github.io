@@ -1,0 +1,59 @@
+* {
+  /* border: 1px solid #fff; */
+}
+
+a {
+  text-decoration: underline;
+  transition: text-decoration 1s;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: darkorange;
+}
+
+a:active {
+  color: darkorange;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+li {
+  font-size: 1.5em;
+  margin: 1.3em 0;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.wrapper {
+  padding: 50px;
+  height: 100%;
+}
+
+.flexbox {
+  /* border: 1px solid #00ff3c; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.flexbox__item-content {
+  text-align: center;
+  padding: 50px;
+}
+
+
+
