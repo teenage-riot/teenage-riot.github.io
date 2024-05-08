@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>teenage-riot</title>
@@ -15,35 +16,82 @@
 <body>
   <div class="wrapper">
     <div class="flexbox">
+
       <div class="flexbox__item">
         <div class="flexbox__item-content">
-          <h2><a href="https://github.com/teenage-riot" target="_blank">teenage-riot</a> in a public station</h2>
+          <h2>
+            <span class="bg-colored-text">
+              <a href="https://github.com/teenage-riot" target="_blank">teenage-riot</a>
+              in a public station
+            </span>
+          </h2>
         </div>
       </div>
       <div class="flexbox__item">
         <div class="flexbox__item-content">
           <p>
-            Привет! Меня зовут Глеб, я изучаю вёрстку, и это страничка с моими проектами.
+            <span class="bg-colored-text">
+              Привет! Меня зовут Глеб, я изучаю вёрстку, и это страничка с моими
+              проектами.
+            </span>
           </p>
         </div>
       </div>
+
       <div class="flexbox__item">
         <div class="flexbox__item-content">
           <ul>
-            <li><a href="" target="_blank">Косплей на loremflickr.com</a></li>
-            <li><a href="https://teenage-riot.github.io/invite_quest/" target="_blank">Инвайт-квест от Медоеда</a></li>
-            <li><a href="https://teenage-riot.github.io/chemical_converter/" target="_blank">Конвертер для Тани</a></li>
+            <li>
+              <span class="bg-colored-text">
+                <a href="https://teenage-riot.github.io/hello_freelance/" target="_blank">Косплей на loremflickr.com</a>
+              </span>
+            </li>
+            <li>
+              <span class="bg-colored-text">
+                <a href="https://teenage-riot.github.io/invite_quest/" target="_blank">Инвайт-квест от Медоеда</a>
+              </span>
+            </li>
+            <li>
+              <span class="bg-colored-text">
+                <a href="https://teenage-riot.github.io/chemical_converter/" target="_blank">Конвертер для Тани</a>
+              </span>
+            </li>
           </ul>
         </div>
       </div>
+
       <div class="flexbox__item">
         <div class="flexbox__item-content"></div>
       </div>
     </div>
 
-  </div>
+    <video autoplay muted loop class="video-background" id="bg-video">
+      <source src="video/teenage-riot.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <script src="script/transform.js"></script>
+    <button class="music-btn" onclick="toggleMute()">
+      <span class="material-symbols-outlined" id="music-picture">
+        no_sound
+      </span>
+    </button>
+
+    <script>
+      const video = document.getElementById('bg-video');
+      const picture = document.getElementById('music-picture');
+
+      function toggleMute() {
+        if (video.muted) {
+          video.muted = false;
+          picture.innerHTML = "volume_up";
+        } else {
+          video.muted = true;
+          picture.innerHTML = "no_sound";
+        }
+      }
+    </script>
+
+  </div>
 </body>
 
 </html>

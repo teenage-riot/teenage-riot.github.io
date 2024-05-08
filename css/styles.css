@@ -30,7 +30,7 @@ h2 {
 
 li {
   font-size: 1.5em;
-  margin: 1.3em 0;
+  margin: 1.5em 0;
 }
 
 p {
@@ -55,5 +55,31 @@ p {
   padding: 50px;
 }
 
+.bg-colored-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25em;
+  border-radius: 0.33em;
+}
 
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
 
+.music-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1em;
+  border-radius: 0.5em;
+}
