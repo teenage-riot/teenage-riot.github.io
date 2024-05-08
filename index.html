@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>teenage-riot</title>
@@ -79,6 +80,11 @@
     <script>
       const video = document.getElementById('bg-video');
       const picture = document.getElementById('music-picture');
+      const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+
+      if (isMobileDevice) {
+        video.src = ''; // Предотвращение загрузки видео на мобильных устройствах
+      }
 
       function toggleMute() {
         if (video.muted) {
