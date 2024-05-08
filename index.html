@@ -19,22 +19,18 @@
     <div class="flexbox">
 
       <div class="flexbox__item">
-        <div class="flexbox__item-content">
+        <div class="flexbox__item-content bg-colored-text">
           <h2>
-            <span class="bg-colored-text">
-              <a href="https://github.com/teenage-riot" target="_blank">teenage-riot</a>
-              in a public station
-            </span>
+            <a href="https://github.com/teenage-riot" target="_blank">teenage-riot</a>
+            in a public station
           </h2>
         </div>
       </div>
       <div class="flexbox__item">
-        <div class="flexbox__item-content">
+        <div class="flexbox__item-content bg-colored-text">
           <p>
-            <span class="bg-colored-text">
-              Привет! Меня зовут Глеб, я изучаю вёрстку, и это страничка с моими
-              проектами.
-            </span>
+            Привет! Меня зовут Глеб, я изучаю вёрстку, и это страничка с моими
+            проектами.
           </p>
         </div>
       </div>
@@ -42,62 +38,51 @@
       <div class="flexbox__item">
         <div class="flexbox__item-content">
           <ul>
-            <li>
-              <span class="bg-colored-text">
-                <a href="https://teenage-riot.github.io/hello_freelance/" target="_blank">Косплей на loremflickr.com</a>
-              </span>
+            <li class="bg-colored-text">
+              <a href="https://teenage-riot.github.io/hello_freelance/" target="_blank">Косплей на loremflickr.com</a>
             </li>
-            <li>
-              <span class="bg-colored-text">
-                <a href="https://teenage-riot.github.io/invite_quest/" target="_blank">Инвайт-квест от Медоеда</a>
-              </span>
+            <li class="bg-colored-text">
+              <a href="https://teenage-riot.github.io/invite_quest/" target="_blank">Инвайт-квест от Медоеда</a>
             </li>
-            <li>
-              <span class="bg-colored-text">
-                <a href="https://teenage-riot.github.io/chemical_converter/" target="_blank">Конвертер для Тани</a>
-              </span>
+            <li class="bg-colored-text">
+              <a href="https://teenage-riot.github.io/chemical_converter/" target="_blank">Конвертер для Тани</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="flexbox__item">
-        <div class="flexbox__item-content"></div>
-      </div>
-    </div>
-
-    <video autoplay muted loop class="video-background" id="bg-video">
+      <video autoplay muted loop class="video-background" id="bg-video">
       <source src="video/teenage-riot.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <button class="music-btn" onclick="toggleMute()">
-      <span class="material-symbols-outlined" id="music-picture">
-        no_sound
-      </span>
-    </button>
+      <button class="music-btn" onclick="toggleMute()">
+        <span class="material-symbols-outlined" id="music-picture">
+          no_sound
+        </span>
+      </button>
 
-    <script>
-      const video = document.getElementById('bg-video');
-      const picture = document.getElementById('music-picture');
-      const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+      <script>
+        const video = document.getElementById('bg-video');
+        const picture = document.getElementById('music-picture');
+        const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
 
-      if (isMobileDevice) {
-        video.src = ''; // Предотвращение загрузки видео на мобильных устройствах
-      }
-
-      function toggleMute() {
-        if (video.muted) {
-          video.muted = false;
-          picture.innerHTML = "volume_up";
-        } else {
-          video.muted = true;
-          picture.innerHTML = "no_sound";
+        if (isMobileDevice) {
+          video.src = ''; // Предотвращение загрузки видео на мобильных устройствах
         }
-      }
-    </script>
 
-  </div>
+        function toggleMute() {
+          if (video.muted) {
+            video.muted = false;
+            picture.innerHTML = "volume_up";
+          } else {
+            video.muted = true;
+            picture.innerHTML = "no_sound";
+          }
+        }
+      </script>
+
+    </div>
 </body>
 
 </html>

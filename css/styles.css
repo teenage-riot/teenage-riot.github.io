@@ -30,7 +30,7 @@ h2 {
 
 li {
   font-size: 1.5em;
-  margin: 1.5em 0;
+  margin: 1em 0;
 }
 
 p {
@@ -38,27 +38,31 @@ p {
 }
 
 .wrapper {
-  padding: 50px;
+  /* padding: 50px; */
   height: 100%;
 }
 
 .flexbox {
-  /* border: 1px solid #00ff3c; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
 }
 
-.flexbox__item-content {
-  text-align: center;
+.flexbox__item {
+  align-self: center;
   padding: 50px;
 }
 
+.flexbox__item-content {
+  text-align: center;
+}
+
 .bg-colored-text {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.25em;
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 0.33em;
+  line-height: 2rem;
+  padding: 0.25em;
 }
 
 .video-background {
@@ -78,7 +82,7 @@ p {
   top: 20px;
   left: 20px;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   padding: 1em;
   border-radius: 0.5em;
@@ -91,5 +95,9 @@ p {
   }
   .music-btn {
     display: none;
+  }
+  body {
+    background-image: url(../img/bg-doors.jpg);
+    background-size: cover;
   }
 }
