@@ -83,3 +83,13 @@ p {
   padding: 1em;
   border-radius: 0.5em;
 }
+
+/* Скрываем видео на мобильных устройствах */
+@media only screen and (max-width: 768px) {
+  .video-background {
+    display: none;
+  }
+  .music-btn {
+    display: none;
+  }
+}
